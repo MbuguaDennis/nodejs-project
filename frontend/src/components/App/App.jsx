@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className='bg-blue-500 min-h-full'>
       <h1>{name}</h1>
       <h3>Software Developer in Nairobi</h3>
 
@@ -44,7 +44,7 @@ const App = () => {
 
       <ul>
         {data.map((member) => (
-          <li key={member.memberId || member.id}>
+          <li className='bg-pink-500 text-white' key={member.memberId || member.id}>
             Name: {member.fullName}
           </li>
         ))}
