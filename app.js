@@ -7,6 +7,8 @@ const { fileURLToPath } = require('node:url');
 
 const app = express();
 
+const PORT =  5000 ||app.process.PORT 
+
 // Middleware
 app.use(express.json());
 app.use(cors()); // remember parentheses!
@@ -127,6 +129,6 @@ app.delete('/members/:id', (req, res) => {
 
 
 // Start server
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
